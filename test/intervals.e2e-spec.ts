@@ -31,10 +31,10 @@ describe('Movies API - Award Intervals (e2e)', () => {
     expect(min).toBeInstanceOf(Array);
     expect(max).toBeInstanceOf(Array);
 
-    expect(min[0]?.producer).toEqual('Bo Derek');
-    expect(min[0]?.interval).toEqual(6);
-    expect(min[0]?.previousWin).toEqual(1984);
-    expect(min[0]?.followingWin).toEqual(1990);
+    expect(min[0]?.producer).toEqual('Joel Silver');
+    expect(min[0]?.interval).toEqual(1);
+    expect(min[0]?.previousWin).toEqual(1990);
+    expect(min[0]?.followingWin).toEqual(1991);
 
     expect(max[0]?.producer).toEqual('Matthew Vaughn');
     expect(max[0]?.interval).toEqual(13);

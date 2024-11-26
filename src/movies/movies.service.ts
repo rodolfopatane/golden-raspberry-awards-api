@@ -26,7 +26,7 @@ export class MoviesService {
     const producerMap = new Map<string, number[]>();
 
     winners.forEach((movie) => {
-      const producers = movie.producers.split(',').map((p) => p.trim());
+      const producers = movie.producers.split(/,|and/).map((p) => p.trim()).filter((p) => p);
       producers.forEach((producer) => {
         if (!producerMap.has(producer)) producerMap.set(producer, []);
 

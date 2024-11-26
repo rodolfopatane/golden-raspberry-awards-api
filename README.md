@@ -8,7 +8,7 @@ API RESTful para consultar informações sobre os vencedores da categoria "Pior 
 
 \* A fonte de dados original em formato CSV não fornece dados de categoria, portando a solução considera que TODOS pertencem a categoria **Pior Filme** e dispensa implementação de campos, propriedades, indices e filtros associados a categoria.
 
-\*\* Após obter os vencedores do banco de dados a aplicação executa as regras de negócio para encontrar os produtores com o maior e menor intervalo entre prémios consecutivos, esse processo também poderia ser implementado diretamente na query do banco de dados por exemplo.
+\*\* Após obter os vencedores do banco de dados a aplicação executa as regras de negócio para encontrar os produtores com o maior e menor intervalo entre prémios consecutivos, esse processo também poderia incluir uma estrutura mais complexa para o banco de dados com mais tabelas e efetuando os filtros diretamente em uma query por exemplo.
 
 ## Settings
 
