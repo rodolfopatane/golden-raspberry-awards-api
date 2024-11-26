@@ -1,8 +1,18 @@
 # Golden Raspberry Awards API
 
+Swagger disponível em http://localhost:3000/api
+
 ## Description
 
-API RESTful para consultar informações sobre os indicados e vencedores da categoria "Pior Filme" do Golden Raspberry Awards. O objetivo principal é fornecer dados sobre os produtores com o maior e menor intervalo entre prêmios consecutivos.
+API RESTful para consultar informações sobre os vencedores da categoria "Pior Filme" do Golden Raspberry Awards. O objetivo principal é fornecer dados sobre os produtores com o maior e menor intervalo entre prêmios consecutivos.
+
+\* A fonte de dados original em formato CSV não fornece dados de categoria, portando a solução considera que TODOS pertencem a categoria **Pior Filme** e dispensa implementação de campos, propriedades, indices e filtros associados a categoria.
+
+\*\* Após obter os vencedores do banco de dados a aplicação executa as regras de negócio para encontrar os produtores com o maior e menor intervalo entre prémios consecutivos, esse processo também poderia ser implementado diretamente na query do banco de dados por exemplo.
+
+## Settings
+
+As configurações e regras de validação estão centralizadas no arquivo **./src/shared/app-params.ts**.
 
 ## Project setup
 
@@ -35,19 +45,3 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## Checklist de Desenvolvimento
-
-- [x] A aplicação deve conter um readme com instruções para rodar o projeto e os testes de integração.
-
-- [ ] Ler o arquivo CSV dos filmes e inserir os dados em uma base de dados ao iniciar a aplicação.
-
-- [ ] Obter o produtor com maior intervalo entre dois prêmios consecutivos, e o que obteve dois prêmios mais rápido, seguindo a especificação de formato definida na
-
-- [ ] O web service RESTful deve ser implementado com base no nível 2 de maturidade de Richardson;
-
-- [ ] Devem ser implementados somente testes de integração. Eles devem garantir que os dados obtidos estão de acordo com os dados fornecidos na proposta;
-
-- [ ] O banco de dados deve estar em memória utilizando um SGBD embarcado (por exemplo, H2). Nenhuma instalação externa deve ser necessária;
-
-- [ ] O código-fonte deve ser disponibilizado em um repositório git (Github, Gitlab, Bitbucket, etc).

@@ -4,13 +4,24 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug Nest.js Application",
+      "name": "Debug",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "start:debug"],
       "skipFiles": ["<node_internals>/**"],
       "sourceMaps": true,
       "console": "integratedTerminal",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
-    }
+    },
+    {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug e2e tests",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": ["run", "test:e2e:debug"],
+        "skipFiles": ["<node_internals>/**"],
+        "sourceMaps": true,
+        "console": "integratedTerminal",
+        "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      }
   ]
 }

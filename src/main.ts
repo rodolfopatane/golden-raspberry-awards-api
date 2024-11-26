@@ -4,12 +4,15 @@ import { ConfigService } from '@nestjs/config';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    logger: ['log', 'warn', 'error'],
+  });
+
   const configService = app.get(ConfigService);
 
   const config = new DocumentBuilder()
     .setTitle('Golden Raspberry Awards API')
-    .setDescription('API para consulta de vencedores e indicados')
+    .setDescription('API RESTful para consultar informações sobre os indicados e vencedores da categoria "Pior Filme" do Golden Raspberry Awards. O objetivo principal é fornecer dados sobre os produtores com o maior e menor intervalo entre prêmios consecutivos.')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
