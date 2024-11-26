@@ -56,8 +56,8 @@ export class DatabaseService implements OnModuleInit {
       studios: cols[AppParams.STUDIOS_CSV_POSITION],
       producers: cols[AppParams.PRODUCERS_CSV_POSITION],
       winner:
-        cols[AppParams.WINNER_CSV_POSITION]?.toLowerCase() == 'yes' ||
-        cols[AppParams.WINNER_CSV_POSITION]?.toLowerCase() == 'true',
+        cols[AppParams.WINNER_CSV_POSITION]?.toLowerCase()?.trim() == 'yes' ||
+        cols[AppParams.WINNER_CSV_POSITION]?.toLowerCase()?.trim() == 'true',
     });
   }
 
